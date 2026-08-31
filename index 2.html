@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Nishaani Collection — Oxidized Jewellery &amp; Jhumkas</title>
+<meta name="description" content="The Nishaani Collection — handcrafted oxidized jewellery and jhumkas for ethnic and western wear. Message us to order.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --charcoal:#1c1a18;
+    --charcoal-2:#242019;
+    --charcoal-3:#2c2620;
+    --silver:#b8b2a6;
+    --silver-bright:#ddd7c9;
+    --patina:#a15a34;
+    --patina-dim:#8c4a2f;
+    --ivory:#e8e1d3;
+    --ink:#100f0d;
+    --line: rgba(184,178,166,0.22);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--charcoal);
+    color:var(--ivory);
+    font-family:'Karla', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    letter-spacing:0.2px;
+    margin:0;
+  }
+  a{color:inherit;}
+  img,svg{display:block;max-width:100%;}
+  .wrap{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+  ::selection{background:var(--patina);color:var(--ivory);}
+  :focus-visible{outline:2px solid var(--silver-bright);outline-offset:3px;}
+
+  /* subtle hammered-metal grain, used as a fixed overlay */
+  .grain{
+    position:fixed;inset:0;pointer-events:none;z-index:1;
+    opacity:0.05;mix-blend-mode:overlay;
+  }
+
+  /* ---------- header ---------- */
+  header{
+    position:relative;z-index:2;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:46px 28px;
+    margin:0 auto;
+    background-image:
+      linear-gradient(180deg, rgba(20,18,16,0.82) 0%, rgba(20,18,16,0.88) 60%, var(--charcoal) 100%),
+      url("images/jhumkas-featured.png");
+    background-size:cover;
+    background-position:65% 80%;
+  }
+  header > *{
+    max-width:1080px;
+    width:100%;
+  }
+  .header-inner{
+    max-width:1080px;margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;
+    width:100%;
+  }
+  .brandmark{display:flex;align-items:center;gap:12px;}
+  .brandmark svg{width:34px;height:34px;}
+  .brandmark span{font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;color:var(--silver-bright);}
+  .wa-link{
+    font-size:0.9rem;
+    text-decoration:none;
+    border-bottom:1px solid var(--line);
+    padding-bottom:2px;
+    color:var(--ivory);
+    transition:border-color 0.2s ease;
+  }
+  .wa-link:hover{border-color:var(--patina);}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;z-index:2;
+    padding:60px 28px 100px;
+    max-width:1080px;margin:0 auto;
+    display:grid;
+    grid-template-columns:1fr 380px;
+    gap:56px;
+    align-items:center;
+  }
+  .hero-photo{
+    border:1px solid var(--line);
+    padding:14px;
+    opacity:0;
+    transform:scale(0.96);
+    animation:press 1.1s cubic-bezier(.2,.8,.2,1) 0.15s forwards;
+  }
+  .hero-photo img{width:100%;height:auto;display:block;}
+  @keyframes press{
+    0%{opacity:0;transform:scale(0.92);}
+    60%{opacity:1;transform:scale(1.01);}
+    100%{opacity:1;transform:scale(1);}
+  }
+  .hero h1{
+    font-size:clamp(2.3rem, 5vw, 3.6rem);
+    font-style:italic;
+    font-weight:400;
+    color:var(--silver-bright);
+    max-width:11ch;
+    line-height:1.08;
+  }
+  .hero p.lede{
+    margin-top:22px;
+    max-width:46ch;
+    font-size:1.08rem;
+    color:var(--silver);
+  }
+  .hero .cta-row{
+    margin-top:34px;
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+    align-items:center;
+  }
+  .btn-stamp{
+    display:inline-flex;align-items:center;gap:10px;
+    background:transparent;
+    border:1px solid var(--silver);
+    color:var(--ivory);
+    padding:13px 26px;
+    border-radius:999px;
+    text-decoration:none;
+    font-size:0.95rem;
+    font-family:'Karla',sans-serif;
+    letter-spacing:0.2px;
+    transition:background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  }
+  .btn-stamp:hover{background:var(--patina-dim);border-color:var(--patina-dim);}
+  .btn-stamp svg{width:16px;height:16px;}
+  .hero .subtle-link{
+    font-size:0.9rem;color:var(--silver);text-decoration:none;border-bottom:1px dashed var(--line);
+  }
+
+  /* ---------- section shell ---------- */
+  section{
+    position:relative;z-index:2;
+    box-sizing:border-box;
+    max-width:1080px;
+    margin:0 auto;
+    padding:86px 28px;
+    border-top:1px solid var(--line);
+  }
+  .kicker-row{display:flex;align-items:center;gap:14px;margin-bottom:26px;}
+  .kicker-row svg{width:22px;height:22px;flex-shrink:0;}
+  .kicker-row p{margin:0;font-size:0.95rem;color:var(--silver);}
+
+  /* ---------- story ---------- */
+  .story{display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:start;}
+  .story h2{
+    font-size:1.9rem;font-style:italic;font-weight:400;color:var(--silver-bright);
+    max-width:14ch;margin-bottom:24px;
+  }
+  .story p{max-width:52ch;color:var(--ivory);font-size:1.02rem;}
+  .story p + p{margin-top:16px;}
+  .story .pull{
+    border-left:1px solid var(--patina);
+    padding-left:22px;
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:1.25rem;
+    color:var(--silver-bright);
+    line-height:1.5;
+  }
+
+  /* ---------- collections / product grid ---------- */
+  .filter-row{display:flex;gap:10px;margin-bottom:34px;flex-wrap:wrap;}
+  .filter-btn{
+    background:transparent;border:1px solid var(--line);color:var(--silver);
+    padding:8px 20px;border-radius:999px;font-family:'Karla',sans-serif;font-size:0.88rem;
+    cursor:pointer;transition:border-color .2s ease,color .2s ease,background .2s ease;
+  }
+  .filter-btn:hover{border-color:var(--silver);color:var(--ivory);}
+  .filter-btn.active{background:var(--patina-dim);border-color:var(--patina-dim);color:var(--ivory);}
+
+  .product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+    gap:32px;
+  }
+  .product-card{
+    border:1px solid var(--line);
+    padding:16px;
+    display:flex;flex-direction:column;
+  }
+  .product-photo{
+    aspect-ratio:1/1;
+    overflow:hidden;
+    background:var(--charcoal-2);
+    margin-bottom:16px;
+  }
+  .product-photo img{width:100%;height:100%;object-fit:cover;}
+  .product-card .cat-tag{font-size:0.76rem;color:var(--patina);margin:0;}
+  .product-card h3{
+    font-size:1.15rem;font-style:italic;font-weight:400;color:var(--silver-bright);margin-top:4px;
+  }
+  .product-card p.desc{margin-top:10px;font-size:0.92rem;color:var(--silver);flex:1;}
+  .product-card .price{margin-top:10px;font-size:0.92rem;color:var(--ivory);}
+  .product-card .ask{
+    margin-top:14px;font-size:0.88rem;color:var(--ivory);text-decoration:none;
+    border-bottom:1px solid var(--line);align-self:flex-start;
+  }
+  .product-card .ask:hover{border-color:var(--patina);}
+  .empty-note{color:var(--silver);font-size:0.95rem;}
+
+  .more-note{
+    margin-top:44px;
+    color:var(--silver);
+    font-size:0.95rem;
+    max-width:60ch;
+  }
+
+  /* ---------- how to order ---------- */
+  .steps{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:36px;
+    margin-top:34px;
+  }
+  .step{position:relative;padding-top:26px;}
+  .step .num{
+    font-family:'Fraunces',serif;font-style:italic;font-size:1.1rem;color:var(--patina);
+    position:absolute;top:0;left:0;
+  }
+  .step h4{
+    font-family:'Karla',sans-serif;font-weight:600;font-size:1rem;color:var(--ivory);
+    margin-top:24px;
+  }
+  .step p{font-size:0.92rem;color:var(--silver);margin-top:8px;max-width:32ch;}
+
+  /* ---------- footer ---------- */
+  footer{
+    padding:64px 0 46px;
+    border-top:1px solid var(--line);
+  }
+  .footer-grid{
+    display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:32px;
+  }
+  .footer-brand{display:flex;align-items:center;gap:14px;}
+  .footer-brand svg{width:44px;height:44px;}
+  .footer-brand span{font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem;color:var(--silver-bright);}
+  .footer-links{display:flex;gap:28px;flex-wrap:wrap;}
+  .footer-links a{font-size:0.9rem;text-decoration:none;color:var(--silver);border-bottom:1px solid transparent;}
+  .footer-links a:hover{border-color:var(--patina);color:var(--ivory);}
+  .footer-note{margin-top:40px;font-size:0.8rem;color:rgba(184,178,166,0.55);max-width:60ch;}
+
+  @media (max-width:760px){
+    .hero{grid-template-columns:1fr;gap:28px;}
+    .story{grid-template-columns:1fr;gap:30px;}
+    .product-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:20px;}
+    .steps{grid-template-columns:1fr;gap:30px;}
+    .footer-grid{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<svg class="grain" aria-hidden="true">
+  <filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter>
+  <rect width="100%" height="100%" filter="url(#noise)"/>
+</svg>
+
+<!-- reusable hallmark seal, referenced via <use> -->
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="seal" viewBox="0 0 120 120">
+    <circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="1"/>
+    <circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="2 5"/>
+    <text x="60" y="72" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="46" fill="currentColor">N</text>
+    <line x1="60" y1="4" x2="60" y2="14" stroke="currentColor" stroke-width="1"/>
+  </symbol>
+  <symbol id="jhumka-ethnic" viewBox="0 0 100 100">
+    <circle cx="50" cy="14" r="6" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <path d="M32 24 Q50 16 68 24 L64 52 Q50 62 36 52 Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <path d="M38 30 Q50 26 62 30" fill="none" stroke="currentColor" stroke-width="1"/>
+    <path d="M36 36 Q50 32 64 36" fill="none" stroke="currentColor" stroke-width="1"/>
+    <line x1="40" y1="58" x2="38" y2="80" stroke="currentColor" stroke-width="1.3"/>
+    <line x1="50" y1="60" x2="50" y2="86" stroke="currentColor" stroke-width="1.3"/>
+    <line x1="60" y1="58" x2="62" y2="80" stroke="currentColor" stroke-width="1.3"/>
+    <circle cx="38" cy="83" r="3" fill="currentColor"/>
+    <circle cx="50" cy="89" r="3.5" fill="currentColor"/>
+    <circle cx="62" cy="83" r="3" fill="currentColor"/>
+  </symbol>
+  <symbol id="jhumka-western" viewBox="0 0 100 100">
+    <circle cx="50" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <path d="M50 17 L50 30" stroke="currentColor" stroke-width="1.2"/>
+    <circle cx="50" cy="40" r="12" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <line x1="42" y1="52" x2="34" y2="76" stroke="currentColor" stroke-width="1.2"/>
+    <line x1="50" y1="53" x2="50" y2="82" stroke="currentColor" stroke-width="1.2"/>
+    <line x1="58" y1="52" x2="66" y2="76" stroke="currentColor" stroke-width="1.2"/>
+    <circle cx="34" cy="80" r="2.6" fill="currentColor"/>
+    <circle cx="50" cy="86" r="2.6" fill="currentColor"/>
+    <circle cx="66" cy="80" r="2.6" fill="currentColor"/>
+    <circle cx="38" cy="62" r="2" fill="currentColor"/>
+    <circle cx="62" cy="62" r="2" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<header>
+  <div class="header-inner">
+    <div class="brandmark">
+      <svg style="color:var(--silver-bright)"><use href="#seal"/></svg>
+      <span>The Nishaani Collection</span>
+    </div>
+    <a class="wa-link" href="https://wa.me/918847395574?text=Hi!%20I'd%20like%20to%20know%20more%20about%20The%20Nishaani%20Collection" target="_blank" rel="noopener">Message on WhatsApp</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" style="border-top:none;padding-top:20px;">
+    <div>
+      <h1>A nishaani for the moments you keep.</h1>
+      <p class="lede">Handcrafted oxidized jewellery and jhumkas — some cut for ethnic evenings, some for everyday western wear. Every piece is made to be kept, not just worn once.</p>
+      <div class="cta-row">
+        <a class="btn-stamp" href="https://wa.me/918847395574?text=Hi!%20I'd%20like%20to%20order%20from%20The%20Nishaani%20Collection" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21c5 0 9-4 9-9s-4-9-9-9-9 4-9 9c0 1.6.4 3.1 1.2 4.4L3 21l4.8-1.1C9 20.6 10.5 21 12 21Z"/></svg>
+          Message us to order
+        </a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="images/Nishaani-banner.png" alt="Green enamel and oxidised silver jhumkas from The Nishaani Collection">
+    </div>
+  </section>
+
+  <section id="story" class="story">
+    <div>
+      <h2>What "nishaani" means to us</h2>
+      <p>A nishaani is a mark — a small token someone keeps to remember a person, a place, a moment. That's the feeling we make jewellery for.</p>
+      <p>Oxidized silver already carries that feeling in the metal itself. It darkens and settles the way memory does — nothing about it looks factory-fresh, and that's the point.</p>
+    </div>
+    <p class="pull">We're starting with jhumkas, because a good pair says something the moment you put them on — at a wedding, or with an ordinary Tuesday outfit.</p>
+  </section>
+
+  <section id="collections">
+    <div class="kicker-row">
+      <svg style="color:var(--patina)"><use href="#seal"/></svg>
+      <p>Currently making</p>
+    </div>
+
+    <div class="filter-row">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="ethnic">Ethnic</button>
+      <button class="filter-btn" data-filter="western">Western</button>
+    </div>
+
+    <div class="product-grid" id="productGrid"><!-- filled in by the script at the bottom of the page --></div>
+
+    <p class="more-note">Rings, chains, and other oxidised pieces are still being decided — more will appear here as they're ready.</p>
+  </section>
+
+  <section id="order">
+    <div class="kicker-row">
+      <svg style="color:var(--patina)"><use href="#seal"/></svg>
+      <p>How ordering works, for now</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="num">01</span>
+        <h4>Browse the collection</h4>
+        <p>Look through the jhumka styles above, or ask for photos of what's currently ready.</p>
+      </div>
+      <div class="step">
+        <span class="num">02</span>
+        <h4>Message us on WhatsApp</h4>
+        <p>Tell us which piece, and we'll confirm price, stock, and how soon it can ship.</p>
+      </div>
+      <div class="step">
+        <span class="num">03</span>
+        <h4>We confirm and ship</h4>
+        <p>Once you've paid, your piece goes out with tracking details sent over chat.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <svg style="color:var(--silver)"><use href="#seal"/></svg>
+        <span>The Nishaani Collection</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://wa.me/918847395574" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://instagram.com/thenishaanicollection" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:thenishaanicollection@gmail.com">Email</a>
+      </div>
+    </div>
+    <p class="footer-note"></p>
+  </div>
+</footer>
+
+<script>
+  /* ============================================================
+     ADD YOUR PRODUCTS HERE.
+     Copy one block below, change the details, add a comma between
+     entries — a new product card appears on the site automatically.
+     category must be exactly "ethnic" or "western" (lowercase),
+     that's what the All / Ethnic / Western buttons filter on.
+     price is optional — leave it as "" to show nothing extra.
+     ============================================================ */
+  const PRODUCTS = [
+    {
+      name: "Green Enamel Jhumkas",
+      category: "ethnic",
+      image: "images/Nish-Grn-1.png",
+      price: "",
+      description: "Domed green enamel work with oxidised silver ghungroo detail — made for sarees and lehengas."
+    }
+
+    // Example of how to add your next product — remove the /* and */ once you have a real photo:
+    /*
+    ,{
+      name: "Your next product name",
+      category: "western",
+      image: "images/your-photo.jpg",
+      price: "₹650",
+      description: "One or two lines describing this piece."
+    }
+    */
+  ];
+
+  function waLink(productName){
+    const msg = "Hi! I'm interested in the " + productName;
+    return "https://wa.me/918847395574?text=" + encodeURIComponent(msg);
+  }
+
+  function renderProducts(filter){
+    const grid = document.getElementById('productGrid');
+    const items = filter === 'all' ? PRODUCTS : PRODUCTS.filter(function(p){ return p.category === filter; });
+
+    if (items.length === 0){
+      grid.innerHTML = '<p class="empty-note">Nothing in this category yet — check back soon.</p>';
+      return;
+    }
+
+    grid.innerHTML = items.map(function(p){
+      return (
+        '<div class="product-card">' +
+          '<div class="product-photo"><img src="' + p.image + '" alt="' + p.name + '"></div>' +
+          '<p class="cat-tag">' + (p.category === 'ethnic' ? 'Ethnic' : 'Western') + '</p>' +
+          '<h3>' + p.name + '</h3>' +
+          '<p class="desc">' + p.description + '</p>' +
+          (p.price ? '<p class="price">' + p.price + '</p>' : '') +
+          '<a class="ask" href="' + waLink(p.name) + '" target="_blank" rel="noopener">Ask about this piece →</a>' +
+        '</div>'
+      );
+    }).join('');
+  }
+
+  document.querySelectorAll('.filter-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      renderProducts(btn.dataset.filter);
+    });
+  });
+
+  renderProducts('all');
+</script>
+
+</body>
+</html>
